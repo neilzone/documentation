@@ -96,7 +96,10 @@ sudo cp arch/arm/boot/dts/overlays/README /boot/overlays/
 sudo cp arch/arm/boot/zImage /boot/$KERNEL.img
 ```
 
-**Note**: On a Raspberry Pi 2/3/4, the `-j4` flag splits the work between all four cores, speeding up compilation significantly.
+**Note**:
+
+ * On a Raspberry Pi 2/3/4, the `-j4` flag splits the work between all four cores, speeding up compilation significantly.
+ * You mya need to use 'make -j4 Image modules dtbs' for recent kernels (after 5.8?)
 
 ## Cross-compiling 
 
